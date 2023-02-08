@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 240px 5fr;
+}
+
+
+.sidebar {
+    position: fixed;
+    width: 245px;
+    height: 100vh;
+    padding: 35px 0;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 50px 4fr 1fr;
+    border-right: 1px solid rgba(202, 202, 202, 0.6);
+}
+
+
+
+.sidebar .logo {
+    margin: auto 0;
+    padding-left: 25px;
+    grid-row: 1/2;
+}
+
+.sidebar .navlist {
+    width: 100%;
+    height: 100%;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+.sidebar .navlist .message::before {
+    content: '6';
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    background: #ff3040;
+    position: absolute;
+    top: -7px;
+    left: 35px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+
+.sidebar .navlist .noti::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    background: #ff3040;
+    position: absolute;
+    top: -3px;
+    left: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+
+.sidebar .navlist .list,
+.sidebar .more-options .list {
+    display: flex;
+    gap: 15px;
+    padding-left: 25px;
+    margin: 31px 0 0;
+    position: relative;
+}
+
+.sidebar .navlist .list p {
+    font-size: 15px;
+}
+
+.sidebar .navlist .active {
+    font-weight: bold;
+}
+
+
+
+.sidebar .more-options {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 0;
+    grid-row: 3/4;
+}
+
+.sidebar .profile-pic {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url("../assets/Images/myprofile.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.home-section {
+    width: 100%;
+    min-height: 100vh;
+    grid-column: 2 / 3;
+    display: grid;
+    justify-content: space-evenly;
+    background: #fff;
+    grid-template-columns: 400px 300px;
+    padding-top: 40px;
+}
+
+.home-section main {
+    grid-column: 1 / 2;
+    width: 475px;
+    margin-right: 2rem;
+}
+
+.stories-section {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.stories-section::-webkit-scrollbar {
+    display: none;
+}
+
+.stories-section .account {
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.stories-section .outline {
+    width: 63px;
+    height: 63px;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(40deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5) border-box;
+    border-radius: 50%;
+    border: 2.5px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stories-section .outline img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+
+
+
+
+.post-feed {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+
+
+
+.post-feed .post-card .post-header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-feed .post-card .post-header .posted-details .account {
+    height: 100%;
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.post-feed .post-card .post-header .posted-details .account .outline {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(40deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5) border-box;
+    border-radius: 50%;
+    border: 2.5px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posted-details .insta-id p {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.posted-details .account .posted-time p {
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.post-feed .post-card .post-header .posted-details .account .outline img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.post-card {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(202, 202, 202, 0.8);
+    margin-top: 10px;
+}
+
+
+
+.post-card .post-source {
+    width: 475px;
+    height: 475px;
+
+}
+
+.post-card .post-source img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+.post-card .post-behaviour {
+    width: 100%;
+    max-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.post-behaviour .left-section {
+    display: flex;
+    gap: 15px;
+}
+
+
+.post-behaviour .left-section svg:hover,
+.post-behaviour .right-section svg:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+
+
+.post-caption {
+
+    width: 100%;
+    max-height: 10vh;
+
+}
+
+.post-caption .likes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-caption .likes .profiles {
+    min-width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+}
+
+.post-caption .likes .profiles img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+
+.profile1,
+.profile2,
+.profile3 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile1 {
+    position: absolute;
+    left: 0;
+    z-index: 777;
+}
+
+.profile2 {
+    position: absolute;
+    left: 14px;
+    z-index: 77;
+}
+
+.profile3 {
+    position: absolute;
+    left: 27px;
+    z-index: 7;
+}
+
+.post-caption .likes .info p {
+    font-size: 14px;
+    color: #262626;
+}
+
+.post-caption .likes .info p span {
+    font-weight: bold;
+}
+
+.post-caption .caption {
+    margin: 5px 0;
+}
+
+.post-caption .caption p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.post-caption .caption span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+.comment-section {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.comment-section .view-comment {
+    margin: 10px 0;
+}
+
+.comment-section .add-comment {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+section {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 80px 250px 100px;
+    width: 350px;
+}
+
+
+.account-view {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-view .left-pos {
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+.account-view .left-pos .my_id {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.account-view .left-pos .my_id span {
+    font-weight: bold;
+}
+
+.account-view .left-pos .my_id p {
+    font-weight: normal;
+    color: rgba(53, 53, 53, 0.6);
+}
+
+
+.account-view .left-pos .my_profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+
+
+.account-view .right-pos {
+    font-size: 12px;
+    font-weight: bold;
+    color: #009ff6;
+}
+
+
+
+.suggesion-list {
+    grid-row: 2/3;
+
+}
+
+.suggesion-list .heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #2e2e2e;
+    margin: 5px 0;
+}
+
+.suggesion-list .heading span {
+
+    font-weight: bold;
+    color: rgba(138, 138, 138, 0.8);
+}
+
+.suggesion-list .account-view {
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggesion-list .account-view .left-pos {
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.suggesion-list .account-view .left-pos .my_profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+
+.footer {
+    grid-row: 3/4;
+}
+
+
+.footer ul {
+    list-style: none;
+
+}
+
+.footer ul li {
+    display: inline-block;
+    font-size: 12px;
+    color: #c7c7c7;
+}
+
+
+.footer .copyright {
+    margin: 10px 0;
+    font-size: 12px;
+    color: #c7c7c7;
+}
