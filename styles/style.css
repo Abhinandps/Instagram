@@ -37,9 +37,6 @@
     width: 100%;
     height: 100%;
     grid-row: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 
@@ -83,6 +80,13 @@
     padding-left: 25px;
     margin: 31px 0 0;
     position: relative;
+    transition: 0.1s;
+}
+
+.sidebar .navlist .list:hover,
+.sidebar .more-options .list:hover {
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .sidebar .navlist .list p {
@@ -133,7 +137,6 @@
 
 .stories-section {
     width: 100%;
-    height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
