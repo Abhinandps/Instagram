@@ -10,12 +10,13 @@
 
 .container {
     display: grid;
-    grid-template-columns: 240px 5fr;
+    grid-template-columns: 240px 1fr;
 }
 
 
 .sidebar {
     position: fixed;
+    z-index: 7777;
     width: 245px;
     height: 100vh;
     padding: 35px 0;
@@ -23,6 +24,7 @@
     display: grid;
     grid-template-rows: 50px 4fr 1fr;
     border-right: 1px solid rgba(202, 202, 202, 0.6);
+    background: #fff;
 }
 
 
@@ -126,7 +128,8 @@
     display: grid;
     justify-content: space-evenly;
     background: #fff;
-    /* grid-template-columns: 400px 300px; */
+    grid-template-columns: 400px 300px;
+    gap: 40px;
     padding-top: 40px;
 }
 
