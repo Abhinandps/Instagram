@@ -252,8 +252,12 @@
 .post-card .post-source {
     width: 475px;
     height: 475px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
 }
+
 
 .post-card .post-source img {
     width: 100%;
